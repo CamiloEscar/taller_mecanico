@@ -1,0 +1,91 @@
+Objetivo: Crear una aplicación de escritorio en Python para la gestión de un taller mecánico. La aplicación debe permitir registrar trabajos, gestionar reservas, llevar un control de clientes y facturación, y generar reportes básicos.
+
+Requisitos Funcionales:
+Gestión de Clientes:
+
+Agregar nuevos clientes con información básica (nombre, teléfono, dirección, correo).
+Visualizar la lista de clientes.
+Editar o eliminar la información de un cliente.
+Gestión de Reservas:
+
+Crear reservas de citas para servicios de reparación.
+Permitir elegir el tipo de servicio, fecha y hora.
+Mostrar las reservas del día y las próximas.
+Registro de Trabajos y Servicios Realizados:
+
+Registrar trabajos realizados por el taller: descripción, piezas utilizadas, costos, y técnico encargado.
+Vincular el trabajo con el cliente correspondiente.
+Generar un historial de trabajos de cada cliente.
+Facturación y Pagos:
+
+Generar facturas con los detalles del trabajo realizado.
+Marcar los pagos como realizados o pendientes.
+Controlar los pagos recibidos y las deudas de los clientes.
+Control de Inventario (Opcional):
+
+Registrar piezas o repuestos utilizados en las reparaciones.
+Controlar el stock disponible y generar alertas si el inventario es bajo.
+Generación de Reportes:
+
+Reporte de trabajos realizados (por cliente, por técnico, por fecha).
+Reporte de ingresos (total de pagos recibidos, total pendiente).
+Reporte de inventario (cantidad de piezas en stock, piezas bajas).
+Interfaz Gráfica:
+
+Crear una interfaz simple y fácil de usar con Tkinter o PyQt.
+Las pantallas deben ser intuitivas para que los empleados puedan manejar la aplicación sin dificultad.
+Base de Datos:
+
+Utilizar SQLite para la base de datos local, que guarde los datos de clientes, trabajos, reservas, pagos, etc.
+Relacionar las tablas de la base de datos correctamente (clientes, trabajos, reservas, pagos, inventario).
+Tecnologías y Herramientas Recomendadas:
+Python: Lenguaje principal para el desarrollo.
+Tkinter o PyQt: Para la interfaz gráfica (GUI).
+SQLite: Base de datos ligera y fácil de implementar para almacenamiento local.
+SQLAlchemy (opcional): Para la gestión de la base de datos de manera más eficiente (ORM).
+Estructura Básica de la Aplicación:
+Pantalla Principal:
+
+Menú con opciones: Clientes, Reservas, Trabajos, Inventario, Reportes, Facturación.
+Mostrar información clave, como las reservas del día o trabajos pendientes.
+Pantallas de Clientes:
+
+Formulario para agregar o editar clientes.
+Tabla de clientes registrados con opción de eliminar o modificar.
+Pantallas de Reservas:
+
+Calendario o lista de reservas.
+Formulario para registrar una nueva cita, asociándola a un cliente.
+Pantallas de Trabajos:
+
+Formulario para registrar un trabajo realizado.
+Visualizar el historial de trabajos por cliente.
+Pantalla de Facturación:
+
+Generación de factura con la descripción del trabajo, costo y pago.
+Control de pagos (realizados o pendientes).
+Pantalla de Reportes:
+
+Reportes de trabajos, ingresos, inventario y pagos.
+Opciones para generar reportes en formato CSV o Excel.
+Base de Datos:
+
+Una base de datos SQLite con las siguientes tablas:
+Clientes: ID, nombre, teléfono, dirección, correo.
+Trabajos: ID, cliente_id, fecha, descripción, costo, técnico.
+Reservas: ID, cliente_id, fecha, hora, servicio.
+Pagos: ID, trabajo_id, monto, fecha_pago.
+Inventario (opcional): ID, pieza, cantidad, precio.
+Flujo Básico de la Aplicación:
+El usuario abre la aplicación.
+En la pantalla principal, puede acceder a cualquier módulo (Clientes, Reservas, Trabajos, etc.).
+Para agregar un cliente, se ingresa en el módulo "Clientes", se llena un formulario y se guarda en la base de datos.
+Se puede agregar una nueva reserva o trabajo para el cliente.
+Después de realizar un trabajo, el usuario puede generar una factura y registrar el pago.
+El sistema debe permitir ver el historial de clientes, trabajos realizados y pagos.
+Tareas Técnicas:
+Crear la base de datos SQLite con las tablas necesarias.
+Desarrollar las funcionalidades de CRUD (Crear, Leer, Actualizar, Eliminar) para clientes, reservas, trabajos, y pagos.
+Implementar la interfaz gráfica con Tkinter o PyQt, con formularios y tablas interactivas.
+Conectar la base de datos con la interfaz para que la información se guarde y se recupere correctamente.
+Realizar pruebas de usabilidad para garantizar que la aplicación sea fácil de usar.
